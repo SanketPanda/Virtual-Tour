@@ -1,60 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>360&deg; Tour</title>
-    <meta name="description" content="360&deg; Tour - A-Frame">
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tour</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <a-scene cursor="rayOrigin: mouse" scene>
-        <a-assets>
-            <img id="livingroom" src="Images/livingroom.jpg">
-            <img id="kitchen" src="Images/kitchen.jpg">
-            <img id="hotspot" src="Images/hotspot.png">
-        </a-assets>
+    <div class="pano-image">
+    </div>
 
-        <a-sky src="#livingroom" id="skyBox">
-        </a-sky>
-        <a-image src="#hotspot" rotation="0 90 0" position="4 0 0" height="0.5" width="0.8" id="hotspot1"> </a-image>
-        <a-image src="#hotspot" rotation="00 0 0" position="1 0 5" height="0.5" width="0.8" id="hotspot2"
-            visible="false" scale="" visible="" material="" geometry=""></a-image>
-        <a-text font="kelsonsans" value="Kitchen" width="6" position="4 0.5 -0.5" rotation="0 -90 0" scale="" visible=""
-            text="" id="hotspot1Text"> </a-text>
-        <a-text font="kelsonsans" value="Living Room" width="6" position="1.5 0.6 4.5" rotation="0 -180 0" scale=""
-            text="" id="hotspot2Text" visible="false">
-        </a-text>
-    </a-scene>
-
-    <script>
-        AFRAME.registerComponent("scene", {
-            init: function () {
-
-            }
-        })
-
-        var hotspot1 = document.getElementById("hotspot1");
-        var hotspot2 = document.getElementById("hotspot2");
-        var hotspot1Text = document.getElementById("hotspot1Text");
-        var hotspot2Text = document.getElementById("hotspot2Text");
-        var skybox = document.getElementById('skyBox');
-        hotspot1.addEventListener('click', function () {
-            hotspot1.setAttribute("visible", false);
-            hotspot1Text.setAttribute("visible", false);
-            hotspot2.setAttribute("visible", true);
-            hotspot2Text.setAttribute("visible", true);
-            skybox.setAttribute('src', '#kitchen');
-        });
-        hotspot2.addEventListener('click', function () {
-            hotspot1.setAttribute("visible", true);
-            hotspot1Text.setAttribute("visible", true);
-            hotspot2.setAttribute("visible", false);
-            hotspot2Text.setAttribute("visible", false);
-            skybox.setAttribute('src', '#livingroom');
-        });
-    </script>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
