@@ -8,3 +8,25 @@ body {
   width: 100vw;
   height: 100vh;
 }
+#loadingBar {
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 90%;
+  outline: none;
+  font-family: initial;
+  padding: 1.5%;
+}
+#myBar {
+  height: 24px;
+  background-color: deepskyblue;
+}
+#loadingText{
+  text-align: center;
+  font-size: 100%;
+  font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
+}

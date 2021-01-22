@@ -1,4 +1,4 @@
-window.onload = function () {
+
   const panoImage = document.querySelector(".pano-image");
   const livingroom = "images/livingroom.jpg";
   const kitchen = "images/kitchen.jpg";
@@ -103,4 +103,28 @@ window.onload = function () {
       text[i].style.display = "none";
     }
   }
-};
+  LoadingBar();
+  panaroma1.addEventListener('progress', function(e){
+    
+ });
+
+ panaroma3.addEventListener('load', function(e){
+  var elem = document.getElementById("myBar");
+  elem.style.width = 100 + '%'; 
+  
+});
+
+ function LoadingBar() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      document.getElementById("loadingBar").style.display = "none";
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
