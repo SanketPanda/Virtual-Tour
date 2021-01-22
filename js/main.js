@@ -63,7 +63,7 @@
   viewer.renderer.sortObjects = true;
   viewer.tweenControlCenter(new THREE.Vector3(4, -15, 0), 0);
 
-  var speed = 0.3;
+  var speed = 0.1;
 
   infospot1.addEventListener("click", function () {
     HideHotSpotTexts();
@@ -77,32 +77,32 @@
 
   infospot3.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
-    LoadingBar(speed);
+    LoadingBar(0.2);
   });
 
   infospot4.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
-    LoadingBar(speed);
+    LoadingBar(0.2);
   });
 
   infospot5.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
-    LoadingBar(speed);
+    LoadingBar(0.2);
   });
 
   infospot6.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
-    LoadingBar(speed);
+    LoadingBar(0.2);
   });
 
   infospot7.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
-    LoadingBar(speed);
+    LoadingBar(0.2);
   });
 
   infospot8.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
-    LoadingBar(speed);
+    LoadingBar(0.2);
   });
 
   function HideHotSpotTexts() {
