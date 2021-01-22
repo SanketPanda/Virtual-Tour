@@ -63,6 +63,8 @@
   viewer.renderer.sortObjects = true;
   viewer.tweenControlCenter(new THREE.Vector3(4, -15, 0), 0);
 
+  var speed = 0.3;
+
   infospot1.addEventListener("click", function () {
     HideHotSpotTexts();
     viewer.setPanorama(panaroma2);
@@ -75,26 +77,32 @@
 
   infospot3.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
+    LoadingBar(speed);
   });
 
   infospot4.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
+    LoadingBar(speed);
   });
 
   infospot5.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
+    LoadingBar(speed);
   });
 
   infospot6.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
+    LoadingBar(speed);
   });
 
   infospot7.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
+    LoadingBar(speed);
   });
 
   infospot8.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
+    LoadingBar(speed);
   });
 
   function HideHotSpotTexts() {
@@ -103,18 +111,19 @@
       text[i].style.display = "none";
     }
   }
-  LoadingBar();
-  panaroma1.addEventListener('progress', function(e){
-    
- });
+  LoadingBar(speed);
 
- panaroma3.addEventListener('load', function(e){
-  var elem = document.getElementById("myBar");
-  elem.style.width = 100 + '%'; 
-  
+panaroma3.addEventListener('load', function(e){
+  speed = 1; 
+  HideLoadingBar();
 });
 
- function LoadingBar() {
+function HideLoadingBar(){
+  speed = 1;
+}
+
+ function LoadingBar(speed) {
+  document.getElementById("loadingBar").style.display = "block";
   var elem = document.getElementById("myBar");   
   var width = 1;
   var id = setInterval(frame, 10);
@@ -123,7 +132,7 @@
       document.getElementById("loadingBar").style.display = "none";
       clearInterval(id);
     } else {
-      width = width+0.2; 
+      width = width+speed; 
       elem.style.width = width + '%'; 
     }
   }
