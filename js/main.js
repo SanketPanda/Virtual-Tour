@@ -123,7 +123,7 @@
       document.getElementById("loadingBar").style.display = "none";
       clearInterval(id);
     } else {
-      width++; 
+      width = width+0.2; 
       elem.style.width = width + '%'; 
     }
   }
