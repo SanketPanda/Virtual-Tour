@@ -114,13 +114,9 @@
   LoadingBar(speed);
 
 panaroma3.addEventListener('load', function(e){
-  speed = 1; 
-  HideLoadingBar();
+  speed = 3;
 });
 
-function HideLoadingBar(){
-  speed = 1;
-}
 
  function LoadingBar(speed) {
   document.getElementById("loadingBar").style.display = "block";
