@@ -77,32 +77,38 @@
 
   infospot3.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
-    LoadingBar(0.2);
+    speed = 0.1;
+    LoadingBar();
   });
 
   infospot4.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
-    LoadingBar(0.2);
+    speed = 0.1;
+    LoadingBar();
   });
 
   infospot5.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
-    LoadingBar(0.2);
+    speed = 0.1;
+    LoadingBar();
   });
 
   infospot6.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
-    LoadingBar(0.2);
+    speed = 0.1;
+    LoadingBar();
   });
 
   infospot7.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
-    LoadingBar(0.2);
+    speed = 0.1;
+    LoadingBar();
   });
 
   infospot8.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
-    LoadingBar(0.2);
+    speed = 0.1;
+    LoadingBar();
   });
 
   function HideHotSpotTexts() {
@@ -126,7 +132,7 @@ panaroma5.addEventListener('load', function(e){
 });
 
 
- function LoadingBar(speed) {
+ function LoadingBar() {
   document.getElementById("loadingBar").style.display = "block";
   var elem = document.getElementById("myBar");   
   var width = 1;
