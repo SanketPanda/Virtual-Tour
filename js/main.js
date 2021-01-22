@@ -95,20 +95,14 @@
 
   infospot6.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
-    speed = 0.1;
-    LoadingBar();
   });
 
   infospot7.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
-    speed = 0.1;
-    LoadingBar();
   });
 
   infospot8.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
-    speed = 0.1;
-    LoadingBar();
   });
 
   function HideHotSpotTexts() {
@@ -117,7 +111,7 @@
       text[i].style.display = "none";
     }
   }
-  LoadingBar(speed);
+  LoadingBar();
   panaroma2.addEventListener('load', function(e){
     speed = 15;
   });
