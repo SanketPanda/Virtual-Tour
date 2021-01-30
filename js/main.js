@@ -1,5 +1,8 @@
 
   const panoImage = document.querySelector(".pano-image");
+  const infoText = document.getElementById("infoText");
+  var toggleInfoText = false;
+
   const livingroom = "images/livingroom.jpg";
   const kitchen = "images/kitchen.jpg";
   const tajMahal_1 = "Images/TajMahal_1.jpg";
@@ -32,8 +35,8 @@
   var infospot3 = new PANOLENS.Infospot(10, "Images/infospot3.png");
   infospot3.position.set(100, 10, -20);
 
-  var infospot4 = new PANOLENS.Infospot(1, "Images/infospot4.png");
-  infospot4.position.set(-5, 0, 0);
+  var infospot4 = new PANOLENS.Infospot(1.5, "Images/infospot4.png");
+  infospot4.position.set(-17, 0.2, -1.5);
 
   var infospot5 = new PANOLENS.Infospot(10, "Images/infospot5.png");
   infospot5.position.set(-100, 0, 40);
@@ -47,16 +50,24 @@
   var infospot8 = new PANOLENS.Infospot(25, "Images/infospot8.png");
   infospot8.position.set(500, 0, 0);
 
+  var info1 = new PANOLENS.Infospot(7, "Images/Infoicon.png");
+  info1.position.set(100, 45, 0);
+  info1.addHoverElement( document.getElementById( 'infoText' ));
+  var info2 = new PANOLENS.Infospot(7, "Images/Infoicon1.png");
+  info2.position.set(100, 25, 10);
+  info2.addHoverElement( document.getElementById( 'infoText' ));
   //var position = new THREE.Vector3(-2500.0, 100.72, 1200.72);
 
   panaroma1.add(infospot1);
   panaroma2.add(infospot2);
   panaroma3.add(infospot3);
+  panaroma3.add(info1);
   panaroma3.add(infospot4);
   panaroma4.add(infospot5);
   panaroma4.add(infospot6);
   panaroma5.add(infospot7);
   panaroma5.add(infospot8);
+  panaroma5.add(info2);
 
   viewer.add(panaroma3, panaroma4, panaroma5);
   // viewer.add(panaroma1, panaroma2);
@@ -77,20 +88,14 @@
 
   infospot3.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
-    speed = 0.1;
-    // LoadingBar();
   });
 
   infospot4.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
-    speed = 0.1;
-    // LoadingBar();
   });
 
   infospot5.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
-    speed = 0.1;
-    // LoadingBar();
   });
 
   infospot6.addEventListener("click", function () {
@@ -104,6 +109,8 @@
   infospot8.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
   });
+
+  
 
   function HideHotSpotTexts() {
     var text = document.querySelectorAll(".panolens-infospot");
