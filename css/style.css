@@ -37,7 +37,7 @@ body {
   border: none;
   position: fixed;
   top: 10%;
-  width: 35%;
+  width: 45%;
   outline: none;
   font-family: initial;
   padding: 1%;
@@ -45,7 +45,7 @@ body {
 }
 #info{
   text-align: center;
-  font-size: 50%;
+  font-size: 80%;
   font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
   padding-bottom: 0;
   margin-bottom: 0;
