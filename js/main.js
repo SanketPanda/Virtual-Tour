@@ -63,7 +63,7 @@
   viewer.renderer.sortObjects = true;
   viewer.tweenControlCenter(new THREE.Vector3(4, -15, 0), 0);
 
-  var speed = 0.1;
+  
 
   infospot1.addEventListener("click", function () {
     HideHotSpotTexts();
@@ -78,19 +78,19 @@
   infospot3.addEventListener("click", function () {
     viewer.setPanorama(panaroma4);
     speed = 0.1;
-    LoadingBar();
+    // LoadingBar();
   });
 
   infospot4.addEventListener("click", function () {
     viewer.setPanorama(panaroma5);
     speed = 0.1;
-    LoadingBar();
+    // LoadingBar();
   });
 
   infospot5.addEventListener("click", function () {
     viewer.setPanorama(panaroma3);
     speed = 0.1;
-    LoadingBar();
+    // LoadingBar();
   });
 
   infospot6.addEventListener("click", function () {
@@ -111,19 +111,45 @@
       text[i].style.display = "none";
     }
   }
-  LoadingBar();
-  panaroma2.addEventListener('load', function(e){
+
+  var speed = 0.1;
+  panaroma3.addEventListener("progress",function(e){
+    speed = 0.1;
+    LoadingBar();
+  });
+  panaroma3.addEventListener("load",function(e){
     speed = 15;
   });
-panaroma3.addEventListener('load', function(e){
-  speed = 15;
-});
-panaroma4.addEventListener('load', function(e){
-  speed = 15;
-});
-panaroma5.addEventListener('load', function(e){
-  speed = 15;
-});
+  panaroma4.addEventListener("progress",function(e){
+    speed = 0.1;
+    LoadingBar();
+  });
+  panaroma4.addEventListener("load",function(e){
+    speed = 15;
+  });
+  panaroma5.addEventListener("progress",function(e){
+    speed = 0.1;
+    LoadingBar();
+  });
+  panaroma5.addEventListener("load",function(e){
+    speed = 15;
+  });
+  panaroma6.addEventListener("progress",function(e){
+    speed = 0.1;
+    LoadingBar();
+  });
+  panaroma6.addEventListener("load",function(e){
+    speed = 15;
+  });
+// panaroma3.addEventListener('load', function(e){
+//   speed = 15;
+// });
+// panaroma4.addEventListener('load', function(e){
+//   speed = 15;
+// });
+// panaroma5.addEventListener('load', function(e){
+//   speed = 15;
+// });
 
 
  function LoadingBar() {
