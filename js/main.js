@@ -134,23 +134,6 @@
   panaroma5.addEventListener("load",function(e){
     speed = 15;
   });
-  panaroma6.addEventListener("progress",function(e){
-    speed = 0.1;
-    LoadingBar();
-  });
-  panaroma6.addEventListener("load",function(e){
-    speed = 15;
-  });
-// panaroma3.addEventListener('load', function(e){
-//   speed = 15;
-// });
-// panaroma4.addEventListener('load', function(e){
-//   speed = 15;
-// });
-// panaroma5.addEventListener('load', function(e){
-//   speed = 15;
-// });
-
 
  function LoadingBar() {
   document.getElementById("loadingBar").style.display = "block";
